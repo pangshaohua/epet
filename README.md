@@ -1,8 +1,20 @@
-##完成内容
+##day01
+###完成内容
 	1）使用vue-cli脚手架创建应用
 	2）底部路由导航完成（使用vue-router）
 	3）头部搜索和导航滑动
-##问题
+###问题
 	1）在使用路由组件时，APP中未写router-view标签
 	2）头部导航使用better-scroll插件时，采用ul-li布局，ul宽度设置错误，导致不能进行滑动
 	3）布局不熟练
+##day02
+###完成内容
+	router-link添加class属性无效
+	给routerlink添加样式，直接将router-link的结构位置写成a标签来添加样式；
+	某一样式的激活通过定义router-link-active
+###问题
+  首页定位，去除广告后自动上移
+###解决
+  广告和下部内容自动排列，下部内容绝对定位，指定top为广告高度，
+  bottom为底部高度，并设置overflow为hidden，然后内部内容通过
+  better-scroll形成滚动，再将头部设置绝对定位；
