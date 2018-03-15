@@ -39,6 +39,7 @@
 
 <style lang="stylus" rel="stylesheet/stylus">
   .footer_guide
+    z-index 200
     position fixed
     bottom 0
     left 0
@@ -52,7 +53,8 @@
       flex 1
       flex-direction column
       align-items center
-      color lightgray
+      justify-content center
+      color #999
       &.on
         color lightgreen
       span

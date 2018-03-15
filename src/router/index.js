@@ -7,6 +7,9 @@ import Sort from '../pages/Sort/Sort.vue'
 import Cart from '../pages/Cart/Cart.vue'
 import Profile from '../pages/Profile/Profile.vue'
 
+import SortCategory from '../pages/Sort/SortCategory/SortCategory.vue'
+import SortBrand from '../pages/Sort/SortBrand/SortBrand.vue'
+
 /*const Home = ()=> import('../pages/Home/Home.vue')
 const Sort = ()=> import('../pages/Sort/Sort.vue')
 const Cart = ()=> import('../pages/Cart/Cart.vue')
@@ -26,11 +29,22 @@ export default new VueRouter({
     },
     {
       path:'/sort',
-      component:Sort
+      component:Sort,
+      children:[
+        {
+          path:'/sort/category',
+          component:SortCategory
+        },
+        {
+          path:'/sort/brand',
+          component:SortBrand
+        },
+      ],
     },
     {
       path:'/cart',
-      component:Cart
+      component:Cart,
+
     },
     {
       path:'/profile',
