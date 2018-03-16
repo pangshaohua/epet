@@ -20,7 +20,11 @@
 </template>
 
 <script>
-  export default{}
+  export default{
+    mounted(){
+      this.$store.dispatch('getBrand')
+    }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

@@ -39,6 +39,10 @@ export default new VueRouter({
           path:'/sort/brand',
           component:SortBrand
         },
+        {
+          path:'',
+          redirect:'/sort/category'
+        },
       ],
     },
     {
