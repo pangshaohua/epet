@@ -11,6 +11,10 @@ export const reqBrand = () => ajax('/sort/brand')
 获取品牌和列表
  */
 export const reqCategorysAndList = () => ajax('/sort/category')
+/*
+获取首页信息
+ */
+export const reqHomeMessage = () => ajax('/home')
 
 
 

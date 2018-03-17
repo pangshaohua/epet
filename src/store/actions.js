@@ -1,11 +1,13 @@
 import {
   reqBrand,
   reqCategorysAndList,
+  reqHomeMessage
 } from  '../api'
 
 import {
   RECEIVE_BRAND,
   RECEIVE_CATEGORYSANDLIST,
+  RECEIVE_HOMEMESSAGE
 } from './mutation-types'
 
 export default {
@@ -20,6 +22,12 @@ export default {
     if (result.code===0){
       commit(RECEIVE_CATEGORYSANDLIST,{categorysAndList:result.data})
       callback&&callback()
+    }
+  },
+  async getHomeMessage({commit}){
+    const result = await reqHomeMessage()
+    if (result.code===0){
+      commit(RECEIVE_HOMEMESSAGE,{homeMessage:result.data})
     }
   },
 }
