@@ -21,34 +21,52 @@ export default new VueRouter({
   routes:[
     {
       path:'/',
-      redirect:'/home'
+      redirect:'/home',
+      meta:{
+        showFooter:true
+      }
     },
     {
       path:'/home',
-      component:Home
+      component:Home,
+      meta:{
+        showFooter:true
+      }
     },
     {
       path:'/sort',
       component:Sort,
+      meta:{
+        showFooter:true
+      },
       children:[
         {
           path:'/sort/category',
-          component:SortCategory
+          component:SortCategory,
+          meta:{
+            showFooter:true
+          },
         },
         {
           path:'/sort/brand',
-          component:SortBrand
+          component:SortBrand,
+          meta:{
+            showFooter:true
+          },
         },
         {
           path:'',
-          redirect:'/sort/category'
+          redirect:'/sort/category',
+          meta:{
+            showFooter:true
+          }
         },
       ],
+
     },
     {
       path:'/cart',
       component:Cart,
-
     },
     {
       path:'/profile',

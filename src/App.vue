@@ -4,7 +4,7 @@
       <router-view></router-view>
     </keep-alive>
 
-    <FooterGuide/>
+    <FooterGuide v-show="$route.meta.showFooter"/>
   </div>
 </template>
 

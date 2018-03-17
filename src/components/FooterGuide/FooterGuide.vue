@@ -6,7 +6,7 @@
       </span>
       <span>首页</span>
     </span>
-    <span class="guide_item" :class="{on:$route.path==='/sort'}" @click="goto('/sort')">
+    <span class="guide_item" :class="{on:$route.path==='/sort/category'}" @click="goto('/sort')">
       <span class="item_icon">
         <i class="iconfont icon-fenlei"></i>
       </span>
@@ -31,7 +31,7 @@
   export default{
     methods:{
       goto(path){
-        this.$router.replace(path)
+        this.$router.push(path)
       }
     }
   }
