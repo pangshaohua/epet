@@ -6,9 +6,12 @@ import Home from '../pages/Home/Home.vue'
 import Sort from '../pages/Sort/Sort.vue'
 import Cart from '../pages/Cart/Cart.vue'
 import Profile from '../pages/Profile/Profile.vue'
+import TotalBrand from '../pages/TotalBrand/TotalBrand.vue'
 
 import SortCategory from '../pages/Sort/SortCategory/SortCategory.vue'
 import SortBrand from '../pages/Sort/SortBrand/SortBrand.vue'
+
+
 
 /*const Home = ()=> import('../pages/Home/Home.vue')
 const Sort = ()=> import('../pages/Sort/Sort.vue')
@@ -71,6 +74,10 @@ export default new VueRouter({
     {
       path:'/profile',
       component:Profile
+    },
+    {
+      path:'/totalBrand',
+      component:TotalBrand
     },
   ]
 })

@@ -8,27 +8,44 @@
         <span>注册</span>
       </div>
       <div class="login-type">
-        <div class="normal-login">
-            <span class="login-text">普通登录</span>
-            <span class="icon-bottom">
+        <div class="normal-login" >
+            <span class="login-text" @click="handleLogin(true)">普通登录</span>
+            <span class="icon-bottom" v-show="isShow">
               <i class="iconfont icon-sanjiaoxing-up"></i>
             </span>
         </div>
-        <div class="mobile-login">
-            <span class="login-text">手机动态密码登录</span>
-            <span class="icon-bottom">
+        <div class="mobile-login" >
+            <span class="login-text" @click="handleLogin(false)">手机动态密码登录</span>
+            <span class="icon-bottom" v-show="!isShow">
               <i class="iconfont icon-sanjiaoxing-up"></i>
             </span>
         </div>
       </div>
     </div>
-    <div class="formContainer">
+    <div class="formContainer" v-show="isShow">
       <ul class="formList">
         <li class="form-item">
             <span class="form-icon">
               <i class="iconfont icon-icon--"></i>
             </span>
           <input class="form-input" type="text" placeholder="已注册的手机号">
+        </li>
+        <li class="form-item">
+            <span class="form-icon">
+              <i class="iconfont icon-mima"></i>
+            </span>
+          <input class="form-input" type="text" maxlength="11"
+                 placeholder="手机号/邮箱/用户名" v-model="phone">
+        </li>
+      </ul>
+    </div>
+    <div class="formContainer" v-show="!isShow">
+      <ul class="formList">
+        <li class="form-item">
+            <span class="form-icon">
+              <i class="iconfont icon-icon--"></i>
+            </span>
+          <input class="form-input" type="text" maxlength="11" placeholder="已注册的手机号">
         </li>
         <li class="form-item">
           <span class="form-icon">
@@ -73,7 +90,19 @@
 </template>
 
 <script>
-  export default{}
+  export default{
+    data(){
+      return{
+        isShow:true,
+        phone:''
+      }
+    },
+    methods:{
+      handleLogin(isShow){
+        this.isShow=isShow
+      }
+    }
+  }
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">

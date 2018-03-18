@@ -1,7 +1,8 @@
 import {
   RECEIVE_BRAND,
   RECEIVE_CATEGORYSANDLIST,
-  RECEIVE_HOMEMESSAGE
+  RECEIVE_HOMEMESSAGE,
+  RECEIVE_TotalBrand
 } from './mutation-types'
 
 export default {
@@ -13,5 +14,8 @@ export default {
   },
   [RECEIVE_HOMEMESSAGE](state,{homeMessage}){
     state.homeMessage = homeMessage
+  },
+  [RECEIVE_TotalBrand](state,{totalBrand}){
+    state.totalBrand = totalBrand
   },
 }

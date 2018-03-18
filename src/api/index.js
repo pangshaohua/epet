@@ -16,6 +16,11 @@ export const reqCategorysAndList = () => ajax('/sort/category')
  */
 export const reqHomeMessage = () => ajax('/home')
 
+/*
+获取所有品牌
+ */
+export const reqTotalBrand = () => ajax('/totalBrand')
+
 
 
 

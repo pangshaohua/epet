@@ -18,6 +18,7 @@
         </div>
       </div>
     </div>
+    <div class="total" @click="goto">全部</div>
   </div>
 </template>
 
@@ -25,6 +26,7 @@
   import {mapState} from 'vuex'
   import BScroll from 'better-scroll'
   export default{
+
     mounted(){
       new BScroll('.brand',{
         probeType: 3,
@@ -32,6 +34,11 @@
         click: true, //响应点击
         bounce:false
       })
+    },
+    methods:{
+      goto(){
+        this.$router.push('/totalBrand')
+      }
     },
     computed:{
       ...mapState(['brand'])
@@ -90,4 +97,16 @@
 
 
 
+  .total
+    position absolute
+    right 5px
+    bottom 60px
+    background #999
+    width 40px
+    height 40px
+    text-align center
+    line-height 40px
+    border-radius 50%
+    font-size 14px
+    color #fff
 </style>

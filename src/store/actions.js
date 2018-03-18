@@ -1,13 +1,15 @@
 import {
   reqBrand,
   reqCategorysAndList,
-  reqHomeMessage
+  reqHomeMessage,
+  reqTotalBrand
 } from  '../api'
 
 import {
   RECEIVE_BRAND,
   RECEIVE_CATEGORYSANDLIST,
-  RECEIVE_HOMEMESSAGE
+  RECEIVE_HOMEMESSAGE,
+  RECEIVE_TotalBrand,
 } from './mutation-types'
 
 export default {
@@ -28,6 +30,13 @@ export default {
     const result = await reqHomeMessage()
     if (result.code===0){
       commit(RECEIVE_HOMEMESSAGE,{homeMessage:result.data})
+    }
+  },
+  async getTotalBrand({commit},callback){
+    const result = await reqTotalBrand()
+    if (result.code===0){
+      commit(RECEIVE_TotalBrand,{totalBrand:result.data})
+      callback&&callback()
     }
   },
 }
