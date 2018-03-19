@@ -67,7 +67,7 @@
           </div>
           <!--中部轮播-->
           <div v-if="homeMessage[10]">
-            <ContentMiddleSlide :middleImgsArr="homeMessage[10].value"/>
+            <ContentSlide :imgsArr="homeMessage[10].value"/>
           </div>
 
 
@@ -146,7 +146,6 @@
   import ContentCategory from '../../components/ContentCategory/ContentCategory.vue'
   import ContentScroll from '../../components/ContentScroll/ContentScroll.vue'
   import ContentDivBox from '../../components/ContentDivBox/ContentDivBox.vue'
-  import ContentMiddleSlide from '../../components/ContentMiddleSlide/ContentMiddleSlide.vue'
   import ContentForeign from '../../components/ContentForeign/ContentForeign.vue'
   import ContentTrend from '../../components/ContentTrend/ContentTrend.vue'
   import ContentBottomUl from '../../components/ContentBottomUl/ContentBottomUl.vue'
@@ -188,7 +187,6 @@
       ContentCategory,
       ContentScroll,
       ContentDivBox,
-      ContentMiddleSlide,
       ContentForeign,
       ContentTrend,
       ContentBottomUl

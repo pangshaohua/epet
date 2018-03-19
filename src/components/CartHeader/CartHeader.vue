@@ -40,13 +40,15 @@
 
 <script>
   export default{
-    props:{
-      isShow:Boolean
+    data(){
+      return{
+        isShow:false
+      }
     },
     methods:{
       toggleShow(){
-        this.$emit('toggleShow')
-      },
+        this.isShow=!this.isShow
+      }
     },
   }
 </script>

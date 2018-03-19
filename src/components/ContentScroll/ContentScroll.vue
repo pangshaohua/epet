@@ -15,7 +15,7 @@
               </span>
           </div>
           <div class="more">
-            <img src="./images/more.png" alt="more">
+            <img src="https://img2.epetbar.com/nowater/2018-02/02/12/0e7b95a6cae2f593c0277eac64f94794.png" alt="more">
           </div>
         </div>
       </div>
